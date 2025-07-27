@@ -13,9 +13,9 @@ const INITIAL_STATE = Object.fromEntries(
 );
 
 const emailjsConfig = {
-  serviceId: import.meta.env.VITE_EMAILJS_SERVICE_ID,
-  templateId: import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-  accessToken: import.meta.env.VITE_EMAILJS_ACCESS_TOKEN,
+  serviceKey: import.meta.env.VITE_EMAILJS_SERVICE_ID,
+  templateKey: import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+  publicKey: import.meta.env.VITE_EMAILJS_ACCESS_TOKEN,
 };
 
 const Contact = () => {
@@ -38,16 +38,15 @@ const Contact = () => {
 
     emailjs
       .send(
-        emailjsConfig.serviceId,
-        emailjsConfig.templateId,
+        emailjsConfig.serviceKey,
+        emailjsConfig.templateKey,
         {
-          form_name: form.name,
-          to_name: config.html.fullName,
-          from_email: form.email,
-          to_email: config.html.email,
-          message: form.message,
+          clientName: form.name,
+          clientEmail: form.email,
+          clientMessageText: form.message,
+          clientNumber:'XXXXXX3806'
         },
-        emailjsConfig.accessToken
+       emailjsConfig.publicKey
       )
       .then(
         () => {
@@ -58,7 +57,6 @@ const Contact = () => {
         },
         (error) => {
           setLoading(false);
-
           console.log(error);
           alert("Something went wrong.");
         }

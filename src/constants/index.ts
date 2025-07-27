@@ -3,7 +3,6 @@ import type {
   TService,
   TTechnology,
   TExperience,
-  TTestimonial,
   TProject,
 } from "../types";
 
@@ -23,15 +22,12 @@ import {
   mongodb,
   git,
   figma,
-  docker,
-  meta,
-  starbucks,
-  tesla,
-  shopify,
   carrent,
   jobit,
   tripguide,
   threejs,
+  fatcat,
+  neogcamp
 } from "../assets";
 
 export const navLinks: TNavLink[] = [
@@ -63,7 +59,7 @@ const services: TService[] = [
     icon: backend,
   },
   {
-    title: "Content Creator",
+    title: "Full stack developer",
     icon: creator,
   },
 ];
@@ -117,158 +113,114 @@ const technologies: TTechnology[] = [
     name: "figma",
     icon: figma,
   },
-  {
-    name: "docker",
-    icon: docker,
-  },
 ];
 
 const experiences: TExperience[] = [
   {
-    title: "React.js Developer",
-    companyName: "Starbucks",
-    icon: starbucks,
+    title: "Backend developer Intern",
+    companyName: "Fatcat",
+    icon: fatcat,
     iconBg: "#383E56",
-    date: "March 2020 - April 2021",
+    date: "Feb 2024 - Sept 2024",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Developed a CRUD application using JDBC Template, enabling efficient database operations.",
+      "Designed APIs for exporting data to Excel and for visualizing data in graph or pie chart formats.",
+      "Created and managed multiple tables and views, optimizing database structure for better performance and usability"
     ],
   },
   {
-    title: "React Native Developer",
-    companyName: "Tesla",
-    icon: tesla,
+    title: "Full stack developer trainee",
+    companyName: "Neogcamp",
+    icon: neogcamp,
     iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
+    date: "March 2023 - Jan 2024",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "I completed comprehensive training in the MERN stack at NeoG Camp, where I mastered React for building dynamic and responsive front-end applications",
+      "I gained hands-on experience in designing scalable APIs and implementing server-side logic using Node.js and Express, as well as managing databases with MongoDB.",
+      "Through project-based learning, I enhanced my problem-solving abilities, improved debugging skills, and developed a strong understanding of agile methodologies, teamwork, and version control systems like Git.",
     ],
   },
-  {
-    title: "Web Developer",
-    companyName: "Shopify",
-    icon: shopify,
-    iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "Full stack Developer",
-    companyName: "Meta",
-    icon: meta,
-    iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
+  
 ];
 
-const testimonials: TTestimonial[] = [
-  {
-    testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
-  },
-  {
-    testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
-  },
-  {
-    testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
-  },
-];
+
 
 const projects: TProject[] = [
   {
-    name: "Car Rent",
+    name: "Artstore",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "Developed and managed an e commerce application providing service in authentic Indian traditional art, featuring diverse styles like Madhubani, Warli,Miniature and many more.",
     tags: [
       {
         name: "react",
-        color: "blue-text-gradient",
+        color: "pink-text-gradient",
       },
       {
         name: "mongodb",
-        color: "green-text-gradient",
+        color: "pink-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "expressjs",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "nodejs",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "cloudinary",
         color: "pink-text-gradient",
       },
     ],
     image: carrent,
-    sourceCodeLink: "https://github.com/",
+    sourceCodeLink: "https://github.com/GanpatHada/artstore3.0_frontend",
   },
   {
-    name: "Job IT",
+    name: "Globeshare",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "Built a dynamic social media platform using React and firebase, featuring user authentication, real-time posts, likes, and comments. optimized database queries for seamless performance.",
     tags: [
       {
         name: "react",
-        color: "blue-text-gradient",
+        color: "pink-text-gradient",
       },
       {
-        name: "restapi",
-        color: "green-text-gradient",
-      },
-      {
-        name: "scss",
+        name: "firebase",
         color: "pink-text-gradient",
       },
     ],
     image: jobit,
-    sourceCodeLink: "https://github.com/",
+    sourceCodeLink: "https://github.com/GanpatHada/globeshare",
   },
   {
-    name: "Trip Guide",
+    name: "Committask",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "A sleek and intuitive task management web app built for modern productivity. Organize tasks, set priorities, track deadlines.",
     tags: [
       {
-        name: "nextjs",
-        color: "blue-text-gradient",
+        name: "Nextjs",
+        color: "pink-text-gradient",
       },
       {
-        name: "supabase",
-        color: "green-text-gradient",
+        name: "PostgreSQL",
+        color: "pink-text-gradient",
       },
       {
-        name: "css",
+        name: "Typescript",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Redux",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Tailwindcss",
         color: "pink-text-gradient",
       },
     ],
     image: tripguide,
-    sourceCodeLink: "https://github.com/",
+    sourceCodeLink: "https://github.com/GanpatHada/committask",
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+export { services, technologies, experiences,projects };
